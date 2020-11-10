@@ -3,6 +3,8 @@
         <a title="{{@site.title}}" href='{{@site.url}}'>{{{@site.title}}}</a>
     </h1>
     <nav class="header__nav" role="navigation">
-        {{navigation}}
+        {{#foreach navigation}}
+            <a class="header__link" href="{{url absolute="true"}}">{{label}}</a>
+        {{/foreach}}
     </nav>
 </header>
